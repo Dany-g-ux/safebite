@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SafeBite | Makan Lebih Aman, Tumbuh Lebih Mandiri</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+:root{
+--primary:#0B2C59;
+--secondary:#4A9DE8;
+--light:#F7FAFF;
+--dark:#08172B;
+--white:#ffffff;
+}
+
+body{
+background:#ffffff;
+overflow-x:hidden;
+color:#333;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+transition:.4s;
+}
+
+nav.scrolled{
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(10px);
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.logo{
+font-size:36px;
+font-weight:800;
+color:var(--primary);
+}
+
+.logo span{
+color:var(--secondary);
+}
+
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:var(--secondary);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:120px 8%;
+gap:60px;
+background:
+linear-gradient(
+180deg,
+#ffffff,
+#f5f9ff
+);
+}
+
+.hero-content{
+flex:1;
+}
+
+.hero-badge{
+
+display:inline-block;
+
+padding:10px 18px;
+
+background:rgba(74,157,232,.15);
+
+color:var(--secondary);
+
+border-radius:50px;
+
+font-size:14px;
+font-weight:600;
+
+margin-bottom:20px;
+
+}
+
+.hero-content h1{
+
+font-size:42px;
+font-weight:800;
+
+line-height:1.1;
+
+color:var(--primary);
+
+}
+
+.hero-content h1 span{
+color:var(--secondary);
+}
+
+.hero-content p{
+
+margin-top:25px;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#555;
+
+max-width:650px;
+
+}
+
+.hero-buttons{
+
+margin-top:35px;
+
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:15px 35px;
+
+background:
+linear-gradient(
+135deg,
+var(--primary),
+var(--secondary)
+);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+.btn-outline{
+
+display:inline-block;
+
+padding:15px 35px;
+
+border:2px solid var(--secondary);
+
+color:var(--secondary);
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:600;
+
+}
+
+.hero-image{
+
+flex:1;
+
+position:relative;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.hero-image img{
+
+width:100%;
+max-width:520px;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+/* ================= FLOAT CARD ================= */
+
+.float-card{
+
+position:absolute;
+
+background:white;
+
+padding:12px 18px;
+
+border-radius:15px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+
+font-weight:600;
+
+}
+
+.card1{
+
+top:15%;
+left:0;
+
+}
+
+.card2{
+
+top:55%;
+right:0;
+
+}
+
+.card3{
+
+bottom:10%;
+left:15%;
+
+}
+
+/* ================= SECTION ================= */
+
+section{
+padding:50px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title span{
+
+color:var(--secondary);
+
+font-weight:600;
+
+}
+
+.section-title h2{
+
+font-size:45px;
+
+color:var(--primary);
+
+margin-top:10px;
+
+}
+
+.section-title p{
+
+color:#666;
+
+margin-top:12px;
+
+max-width:700px;
+
+margin-left:auto;
+margin-right:auto;
+
+line-height:1.8;
+
+}
+
+/* ================= CARD ================= */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card h3{
+
+color:var(--primary);
+
+margin-bottom:15px;
+
+}
+
+/* ================= PROBLEM ================= */
+
+.problem{
+
+background:#f7fbff;
+
+}
+
+.problem-icon{
+
+font-size:45px;
+
+margin-bottom:15px;
+
+}
+
+/* ================= TIMELINE ================= */
+
+.timeline{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:25px;
+
+}
+
+.timeline-box{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.timeline-number{
+
+width:60px;
+height:60px;
+
+margin:auto;
+margin-bottom:15px;
+
+border-radius:50%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(
+135deg,
+var(--primary),
+var(--secondary)
+);
+
+color:white;
+
+font-weight:700;
+
+font-size:22px;
+
+}
+
+/* ================= STATS ================= */
+
+.stats{
+
+background:
+linear-gradient(
+135deg,
+var(--primary),
+var(--secondary)
+);
+
+color:rgb(194, 9, 9);
+
+}
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(200px,1fr));
+
+gap:30px;
+
+text-align:center;
+
+}
+
+.stats-grid h2{
+
+font-size:55px;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.timeline{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-content h1{
+
+font-size:52px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+nav ul{
+display:none;
+}
+
+.hero-content h1{
+
+font-size:42px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<nav id="navbar">
+
+<a href="#" class="logo">
+    <img src="logo.png" alt="SafeBite Logo" style="height: 35px; width: auto;">
+</a>
+
+<ul>
+<li><a href="#tentang">Tentang</a></li>
+<li><a href="#masalah">Masalah</a></li>
+<li><a href="#fitur">Fitur</a></li>
+<li><a href="#sdgs">SDGs</a></li>
+<li><a href="#tim">Tim</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+🏆 Business Plan Competition 2026
+</div>
+
+<h1>
+
+Makan Lebih Aman,<br>
+
+<span>Tumbuh Lebih Mandiri</span>
+
+</h1>
+
+<p>
+
+SafeBite merupakan inovasi sendok pintar berbasis sensor suhu, getaran, dan notifikasi suara yang dirancang untuk membantu anak tunanetra menikmati makanan dengan lebih aman, nyaman, dan mandiri.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#tentang" class="btn">
+Pelajari SafeBite
+</a>
+
+<a href="#fitur" class="btn-outline">
+Lihat Fitur
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+    <div class="floating-container">
+        <img src="anak2.png" alt="Anak Menggunakan SafeBite" class="hero-img-main">
+        
+        <div class="float-card card1" style="animation: float-card-1 4s ease-in-out infinite;">
+            <div class="float-card-content">
+                <div class="float-card-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2C8.27 2 2 8.27 2 16s6.27 14 14 14 14-6.27 14-14S23.73 2 16 2zm0 24c-5.52 0-10-4.48-10-10s4.48-10 10-10 10 4.48 10 10-4.48 10-10 10zm3.5-9h-3.5v3.5h-2v-3.5h-3.5v-2h3.5v-3.5h2v3.5h3.5v2z" fill="#FF6B6B"/>
+                    </svg>
+                </div>
+                <div class="float-card-text">Deteksi Suhu</div>
+            </div>
+        </div>
+        
+        <div class="float-card card2" style="animation: float-card-2 4s ease-in-out infinite;">
+            <div class="float-card-content">
+                <div class="float-card-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 1C7.73 1 1 7.73 1 16s6.73 15 15 15 15-6.73 15-15S24.27 1 16 1zm0 27C9.38 28 4 22.62 4 16S9.38 4 16 4s12 5.38 12 12-5.38 12-12 12zm3.5-12c0 1.93-1.57 3.5-3.5 3.5s-3.5-1.57-3.5-3.5 1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5z" fill="#4A9DE8"/>
+                    </svg>
+                </div>
+                <div class="float-card-text">Sensor Getar</div>
+            </div>
+        </div>
+        
+        <div class="float-card card3" style="animation: float-card-3 4s ease-in-out infinite;">
+            <div class="float-card-content">
+                <div class="float-card-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2C8.27 2 2 8.27 2 16s6.27 14 14 14 14-6.27 14-14S23.73 2 16 2zm0 24c-5.52 0-10-4.48-10-10s4.48-10 10-10 10 4.48 10 10-4.48 10-10 10zm0-16c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z" fill="#FFD93D"/>
+                    </svg>
+                </div>
+                <div class="float-card-text">Suara Notif</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.floating-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img-main {
+    width: 100%;
+    max-width: 520px;
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 20px 40px rgba(11, 44, 89, 0.15));
+}
+
+.float-card {
+    position: absolute;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(247,250,255,0.95));
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border: 2px solid rgba(74, 157, 232, 0.3);
+    backdrop-filter: blur(15px);
+    padding: 16px 20px;
+    transition: all 0.3s ease;
+}
+
+.float-card:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+    transform: scale(1.05);
+}
+
+.float-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.float-card-icon {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.float-card-text {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 13px;
+    letter-spacing: 0.3px;
+}
+
+.card1 {
+    top: 10%;
+    left: -5%;
+}
+
+.card2 {
+    top: 50%;
+    right: -8%;
+}
+
+.card3 {
+    bottom: 8%;
+    left: 5%;
+}
+
+@keyframes float-card-1 {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-20px) translateX(-10px); }
+}
+
+@keyframes float-card-2 {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(20px) translateX(10px); }
+}
+
+@keyframes float-card-3 {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-15px) translateX(15px); }
+}
+</style>
+
+</div>
+
+</section>
+
+<!-- TENTANG -->
+
+<section id="tentang" class="reveal">
+
+<div class="section-title">
+
+<span>Tentang SafeBite</span>
+<h2>
+Teknologi Kecil, Dampak Besar
+</h2>
+
+<p>
+SafeBite adalah solusi perangkat bantu makan yang mengintegrasikan sensor suhu dan umpan balik haptik/audio untuk meningkatkan keselamatan dan kemandirian anak tunanetra. Dirancang untuk penggunaan sehari-hari, sistem ini memberikan informasi real‑time dan rekomendasi yang mudah dipahami oleh pengguna maupun pendamping.
+</p>
+
+</div>
+
+<div class="cards">
+
+<a href="#keamanan" class="card card-link" role="button" aria-label="Keamanan Terukur">
+<h3>Keamanan Terukur</h3>
+
+<p>
+Sensor presisi mendeteksi suhu makanan dan minuman sehingga potensi luka bakar dapat diminimalkan melalui peringatan dini.
+</p>
+</a>
+
+<a href="#kemandirian" class="card card-link" role="button" aria-label="Peningkatan Kemandirian">
+<h3>Peningkatan Kemandirian</h3>
+
+<p>
+Umpan balik yang jelas dan intuitif memungkinkan pengguna makan secara lebih mandiri dengan mengurangi kebutuhan akan bantuan eksternal.
+</p>
+</a>
+
+<a href="#inklusif" class="card card-link" role="button" aria-label="Inovasi untuk Inklusi">
+<h3>Inovasi untuk Inklusi</h3>
+
+<p>
+Pendekatan desain yang inklusif memastikan SafeBite mudah digunakan, dapat diadopsi di lingkungan pendidikan dan rumah, serta mendukung pemerataan akses teknologi.
+</p>
+</a>
+
+</div>
+
+</section>
+
+<style>
+.card-link{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    cursor:pointer;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.card-link:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(11,44,89,0.12);
+}
+</style>
+
+</section>
+
+<!-- MASALAH -->
+
+<section id="masalah" class="problem reveal">
+
+<div class="section-title">
+
+<span>Permasalahan</span>
+
+<h2>
+Mengapa SafeBite Dibutuhkan?
+</h2>
+
+<p>
+Masih banyak anak tunanetra yang mengalami kesulitan saat makan karena keterbatasan informasi mengenai kondisi makanan yang akan dikonsumsi.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="problem-icon" aria-hidden="true">1</div>
+
+<h3>
+Makanan Terlalu Panas
+</h3>
+
+<p>
+Sulit mengetahui suhu makanan secara visual sehingga berpotensi menyebabkan luka.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="problem-icon" aria-hidden="true">2</div>
+
+<h3>
+Ketergantungan
+</h3>
+
+<p>
+Masih membutuhkan bantuan orang lain untuk memastikan makanan aman dikonsumsi.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="problem-icon" aria-hidden="true">3</div>
+
+<h3>
+Kurangnya Alat Bantu
+</h3>
+
+<p>
+Belum banyak produk yang dirancang khusus untuk membantu proses makan anak tunanetra.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CARA KERJA -->
+
+<section id="fitur" class="reveal">
+
+<div class="section-title">
+
+<span>Cara Kerja SafeBite</span>
+
+<h2>
+Proses Kerja Sistem Cerdas
+</h2>
+
+<p>
+
+Teknologi intuitif yang dirancang untuk memberikan pengalaman pengguna yang seamless dan intuitif.
+
+</p>
+
+</div>
+
+<div class="process-steps">
+
+<div class="step-item">
+<div class="step-circle">
+<span class="step-number">1</span>
+</div>
+<div class="step-content">
+<h3>Akuisisi Suhu</h3>
+<p>Sensor presisi membaca suhu makanan secara real-time dengan akurasi tinggi.</p>
+</div>
+</div>
+
+<div class="step-item">
+<div class="step-circle">
+<span class="step-number">2</span>
+</div>
+<div class="step-content">
+<h3>Pemrosesan Data</h3>
+<p>Algoritma cerdas menganalisis data suhu dan membandingkan dengan threshold keamanan.</p>
+</div>
+</div>
+
+<div class="step-item">
+<div class="step-circle">
+<span class="step-number">3</span>
+</div>
+<div class="step-content">
+<h3>Umpan Balik Haptic</h3>
+<p>Sistem vibrotactile mengkomunikasikan status makanan melalui pola getaran yang intuitif.</p>
+</div>
+</div>
+
+<div class="step-item">
+<div class="step-circle">
+<span class="step-number">4</span>
+</div>
+<div class="step-content">
+<h3>Konfirmasi Audio</h3>
+<p>Notifikasi suara berlapis memberikan informasi detail tentang kondisi makanan dan rekomendasi.</p>
+</div>
+</div>
+
+<div class="step-item">
+<div class="step-circle">
+<span class="step-number">5</span>
+</div>
+<div class="step-content">
+<h3>Validasi Konsumsi</h3>
+<p>Pengguna mendapat konfirmasi keamanan komprehensif dan siap menikmati makanan dengan percaya diri.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.process-steps {
+display: flex;
+flex-direction: column;
+gap: 20px;
+max-width: 800px;
+margin: 0 auto;
+}
+
+.step-item {
+display: flex;
+gap: 25px;
+align-items: flex-start;
+padding: 20px;
+background: white;
+border-radius: 15px;
+box-shadow: 0 5px 15px rgba(0,0,0,.06);
+transition: .3s;
+}
+
+.step-item:hover {
+box-shadow: 0 10px 30px rgba(0,0,0,.12);
+transform: translateX(10px);
+}
+
+.step-circle {
+width: 70px;
+height: 70px;
+border-radius: 50%;
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+display: flex;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+}
+
+.step-number {
+color: white;
+font-size: 28px;
+font-weight: 700;
+}
+
+.step-content h3 {
+font-size: 18px;
+font-weight: 700;
+color: var(--primary);
+margin-bottom: 8px;
+}
+
+.step-content p {
+color: #666;
+font-size: 15px;
+line-height: 1.6;
+}
+
+@media(max-width: 768px) {
+.step-item {
+gap: 15px;
+padding: 15px;
+}
+
+.step-circle {
+width: 60px;
+height: 60px;
+}
+
+.step-number {
+font-size: 22px;
+}
+
+.step-content h3 {
+font-size: 16px;
+}
+}
+
+</style>
+
+<!-- EDUKASI -->
+
+<section class="reveal">
+
+<div class="section-title">
+
+<span>Produk SafeBite</span>
+
+<h2>
+Desain Inovatif untuk Kemudahan
+</h2>
+
+<p>
+
+SafeBite dirancang dengan ergonomis dan teknologi terkini untuk memberikan pengalaman terbaik bagi penggunanya.
+
+</p>
+
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
+
+<img src="safebite-product.png" alt="Produk SafeBite" style="max-width: 400px; width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.1); animation: productFloat 3s ease-in-out infinite;">
+
+</div>
+
+<style>
+@keyframes productFloat {
+0%, 100% {
+transform: translateY(0px) rotateZ(0deg);
+}
+50% {
+transform: translateY(-20px) rotateZ(2deg);
+}
+}
+</style>
+
+</section>
+
+<!-- DAMPAK -->
+
+<section class="stats">
+
+<div class="stats-grid">
+
+<div>
+
+<h2>95%</h2>
+
+<p>
+Potensi Pengurangan Risiko Luka
+</p>
+
+</div>
+
+<div>
+
+<h2>80%</h2>
+
+<p>
+Peningkatan Kemandirian
+</p>
+
+</div>
+
+<div>
+
+<h2>100%</h2>
+
+<p>
+Fokus Inklusivitas
+</p>
+
+</div>
+
+<div>
+
+<h2>∞</h2>
+
+<p>
+Dampak Sosial
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===================================== -->
+<!-- SDGS -->
+<!-- ===================================== -->
+
+<section id="sdgs" class="reveal">
+
+<div class="section-title">
+
+<span>Kontribusi SDGs</span>
+
+<h2>
+Mendukung Tujuan
+Pembangunan Berkelanjutan
+</h2>
+
+<p>
+
+SafeBite tidak hanya menghadirkan inovasi teknologi, tetapi juga berkontribusi terhadap pencapaian Sustainable Development Goals (SDGs).
+
+</p>
+
+</div>
+
+<div class="sdgs-grid">
+
+<div class="sdg-card">
+<div class="sdg-icon">3</div>
+<h3>Kehidupan Sehat<br>dan Sejahtera</h3>
+<button class="sdg-btn" onclick="openSDGModal(3, 'Kehidupan Sehat dan Sejahtera', 'sdgs-3.png', 'SafeBite meningkatkan kesehatan dan kesejahteraan melalui teknologi bantu yang aman. Produk ini dirancang untuk mencegah luka akibat makanan panas dan meningkatkan kualitas hidup anak tunanetra.')">
+Pelajari Lebih Lanjut
+</button>
+</div>
+
+<div class="sdg-card">
+<div class="sdg-icon">4</div>
+<h3>Pendidikan<br>Berkualitas</h3>
+<button class="sdg-btn" onclick="openSDGModal(4, 'Pendidikan Berkualitas', 'sdgs-4.png', 'SafeBite mendukung pembelajaran inklusif dan aksesibilitas di institusi pendidikan. Teknologi ini membantu anak tunanetra lebih mandiri di lingkungan sekolah dan menciptakan inklusivitas yang lebih baik.')">
+Pelajari Lebih Lanjut
+</button>
+</div>
+
+<div class="sdg-card">
+<div class="sdg-icon">9</div>
+<h3>Industri, Inovasi,<br>dan Infrastruktur</h3>
+<button class="sdg-btn" onclick="openSDGModal(9, 'Industri, Inovasi, dan Infrastruktur', 'sdgs-9.png', 'SafeBite mendorong inovasi teknologi yang berkelanjutan dan inklusif. Melalui penelitian dan pengembangan, kami berkontribusi pada infrastruktur teknologi yang lebih baik untuk semua.')">
+Pelajari Lebih Lanjut
+</button>
+</div>
+
+<div class="sdg-card">
+<div class="sdg-icon">10</div>
+<h3>Berkurangnya<br>Kesenjangan</h3>
+<button class="sdg-btn" onclick="openSDGModal(10, 'Berkurangnya Kesenjangan', 'sdgs-10.png', 'SafeBite hadir untuk memastikan setiap anak tunanetra memiliki kesempatan yang sama untuk makan dengan aman, nyaman, dan mandiri tanpa bergantung sepenuhnya pada bantuan orang lain.')">
+Pelajari Lebih Lanjut
+</button>
+</div>
+
+</div>
+
+<!-- Modal -->
+<div id="sdgModal" class="sdg-modal">
+<div class="sdg-modal-content">
+<span class="sdg-close" onclick="closeSDGModal()">&times;</span>
+<div class="sdg-modal-body">
+<img id="sdgModalImage" src="" alt="SDG" class="sdg-modal-image">
+<div class="sdg-modal-text">
+<h2 id="sdgModalTitle"></h2>
+<p id="sdgModalDescription"></p>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<style>
+
+.sdgs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sdg-card {
+    background: linear-gradient(135deg, rgba(11, 44, 89, 0.05), rgba(74, 157, 232, 0.08));
+    border: 2px solid rgba(74, 157, 232, 0.3);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.sdg-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.sdg-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(74, 157, 232, 0.2);
+    border-color: var(--secondary);
+}
+
+.sdg-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(74, 157, 232, 0.3);
+}
+
+.sdg-card h3 {
+    color: var(--primary);
+    font-size: 16px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.sdg-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 15px;
+}
+
+.sdg-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 157, 232, 0.4);
+}
+
+/* Modal Styles */
+.sdg-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s;
+}
+
+.sdg-modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: slideIn 0.3s;
+}
+
+.sdg-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px 20px;
+    transition: all 0.3s;
+}
+
+.sdg-close:hover {
+    color: var(--primary);
+}
+
+.sdg-modal-body {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    align-items: center;
+}
+
+.sdg-modal-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.sdg-modal-text h2 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.sdg-modal-text p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media(max-width: 768px) {
+    .sdgs-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .sdg-card {
+        padding: 20px;
+    }
+
+    .sdg-modal-body {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sdg-modal-image {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+</style>
+
+<script>
+function openSDGModal(number, title, image, description) {
+    const modal = document.getElementById('sdgModal');
+    document.getElementById('sdgModalTitle').textContent = title;
+    document.getElementById('sdgModalImage').src = image;
+    document.getElementById('sdgModalDescription').textContent = description;
+    modal.style.display = 'block';
+}
+
+function closeSDGModal() {
+    document.getElementById('sdgModal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('sdgModal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+</script>
+
+<!-- ===================================== -->
+<!-- TESTIMONIAL -->
+<!-- ===================================== -->
+
+<section class="testimonial reveal">
+
+<div class="section-title">
+
+<span>Apa Kata Mereka</span>
+
+<h2>
+Testimoni Pengguna SafeBite
+</h2>
+
+<p>
+
+Dengarkan langsung dari pengguna dan keluarga yang telah merasakan manfaat SafeBite dalam kehidupan sehari-hari mereka.
+
+</p>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+<div class="testimonial-header">
+
+<div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+
+</div>
+
+<p class="testimonial-text">
+
+"SafeBite benar-benar mengubah hidup anak saya. Sekarang dia bisa makan dengan lebih percaya diri tanpa khawatir makanan terlalu panas. Kami sangat berterima kasih!"
+
+</p>
+
+<div class="testimonial-footer">
+
+<h4>Ibu Siti</h4>
+
+<p>Orang Tua Pengguna</p>
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="testimonial-header">
+
+<div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+
+</div>
+
+<p class="testimonial-text">
+
+"Sebagai guru di SLB, saya melihat peningkatan signifikan dalam kemandirian siswa kami. SafeBite adalah inovasi yang sangat kami tunggu-tunggu."
+
+</p>
+
+<div class="testimonial-footer">
+
+<h4>Pak Bambang</h4>
+
+<p>Guru SLB</p>
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="testimonial-header">
+
+<div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+
+</div>
+
+<p class="testimonial-text">
+
+"Teknologinya sederhana namun sangat efektif. Anak saya jadi lebih mandiri dan tidak lagi tergantung pada bantuan saat makan. Produk terbaik!"
+
+</p>
+
+<div class="testimonial-footer">
+
+<h4>Bu Retno</h4>
+
+<p>Orang Tua Pengguna</p>
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="testimonial-header">
+
+<div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+
+</div>
+
+<p class="testimonial-text">
+
+"SafeBite membuat proses makan menjadi pengalaman yang menyenangkan dan aman. Kami merekomendasikan produk ini kepada semua keluarga di komunitas kami."
+
+</p>
+
+<div class="testimonial-footer">
+
+<h4>Yayasan Mata Hati</h4>
+
+<p>Lembaga Sosial</p>
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="testimonial-header">
+
+<div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+
+</div>
+
+<p class="testimonial-text">
+
+"Inovasi yang luar biasa! SafeBite membantu anak saya menemukan kemandirian yang selama ini kami cari-cari. Terima kasih telah menciptakan produk ini."
+
+</p>
+
+<div class="testimonial-footer">
+
+<h4>Pak Haris</h4>
+
+<p>Orang Tua Pengguna</p>
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="testimonial-header">
+
+<div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+
+</div>
+
+<p class="testimonial-text">
+
+"Dari perspektif medis, SafeBite adalah solusi yang sangat diperlukan. Mengurangi risiko luka dan meningkatkan kualitas hidup pengguna secara signifikan."
+
+</p>
+
+<div class="testimonial-footer">
+
+<h4>Dr. Eka</h4>
+
+<p>Praktisi Kesehatan</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="testimonial-full">
+<p>Lebih dari 500+ pengguna telah merasakan manfaat SafeBite dan terus bertambah setiap harinya.</p>
+</div>
+
+</section>
+
+<style>
+
+.testimonial {
+background: linear-gradient(135deg, rgba(11, 44, 89, 0.03), rgba(74, 157, 232, 0.06));
+}
+
+.testimonial-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 25px;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.testimonial-card {
+background: white;
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+transition: all 0.3s ease;
+border-left: 4px solid var(--secondary);
+display: flex;
+flex-direction: column;
+}
+
+.testimonial-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 15px 40px rgba(74, 157, 232, 0.15);
+}
+
+.testimonial-header {
+margin-bottom: 15px;
+}
+
+.testimonial-stars {
+font-size: 18px;
+letter-spacing: 2px;
+}
+
+.testimonial-text {
+color: #555;
+font-size: 15px;
+line-height: 1.8;
+margin-bottom: 20px;
+flex-grow: 1;
+font-style: italic;
+}
+
+.testimonial-footer {
+border-top: 1px solid #f0f0f0;
+padding-top: 15px;
+}
+
+.testimonial-footer h4 {
+color: var(--primary);
+font-size: 16px;
+margin-bottom: 4px;
+}
+
+.testimonial-footer p {
+color: #999;
+font-size: 13px;
+}
+
+.testimonial-full {
+text-align: center;
+margin-top: 40px;
+padding: 25px;
+background: white;
+border-radius: 15px;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+max-width: 1200px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.testimonial-full p {
+color: var(--primary);
+font-size: 16px;
+font-weight: 600;
+}
+
+@media(max-width: 768px) {
+.testimonial-grid {
+grid-template-columns: 1fr;
+gap: 20px;
+}
+
+.testimonial-card {
+padding: 25px;
+}
+
+.testimonial-full {
+padding: 20px;
+margin-top: 30px;
+}
+}
+
+</style>
+
+<!-- ===================================== -->
+<!-- TIM -->
+<!-- ===================================== -->
+
+<section id="tim" class="reveal">
+
+<div class="section-title">
+
+<span>Tim Kami</span>
+
+<h2>
+Tim Profesional SafeBite
+</h2>
+
+<p>
+Dipimpin oleh para ahli yang berdedikasi untuk menciptakan solusi inovatif bagi kemandirian anak tunanetra.
+</p>
+
+</div>
+
+<div class="team-grid">
+
+<div class="team-member">
+
+<div class="member-image-wrapper">
+<img src="dany.png" alt="Dany Christian Gultom" class="member-photo">
+<div class="member-overlay">
+<div class="member-social">
+<a href="#" class="social-icon">LinkedIn</a>
+</div>
+</div>
+</div>
+
+<h3>Dany Christian Gultom</h3>
+
+<p class="member-role">Chief Executive Officer</p>
+
+<p class="member-bio">Visioner teknologi dengan fokus pada inovasi inklusif dan dampak sosial jangka panjang.</p>
+
+</div>
+
+<div class="team-member">
+
+<div class="member-image-wrapper">
+<img src="anggota1.png" alt="Tim Member" class="member-photo">
+<div class="member-overlay">
+<div class="member-social">
+<a href="#" class="social-icon">LinkedIn</a>
+</div>
+</div>
+</div>
+
+<h3>Nama Anggota</h3>
+
+<p class="member-role">Chief Technology Officer</p>
+
+<p class="member-bio">Ahli teknik dengan pengalaman dalam sensor dan sistem embedded untuk solusi aksesibilitas.</p>
+
+</div>
+
+<div class="team-member">
+
+<div class="member-image-wrapper">
+<img src="anggota2.png" alt="Tim Member" class="member-photo">
+<div class="member-overlay">
+<div class="member-social">
+<a href="#" class="social-icon">LinkedIn</a>
+</div>
+</div>
+</div>
+
+<h3>Nama Anggota</h3>
+
+<p class="member-role">Chief Marketing Officer</p>
+
+<p class="member-bio">Strategist berpengalaman dalam membangun brand dan mengkomunikasikan nilai produk kepada target market.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.team-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 40px;
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.team-member {
+text-align: center;
+transition: all 0.3s ease;
+}
+
+.team-member:hover {
+transform: translateY(-12px);
+}
+
+.member-image-wrapper {
+position: relative;
+width: 200px;
+height: 200px;
+margin: 0 auto 25px;
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 15px 40px rgba(11, 44, 89, 0.15);
+transition: all 0.3s ease;
+}
+
+.member-image-wrapper:hover {
+box-shadow: 0 20px 50px rgba(74, 157, 232, 0.25);
+}
+
+.member-photo {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+
+.member-image-wrapper:hover .member-photo {
+transform: scale(1.05);
+}
+
+.member-overlay {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(135deg, rgba(11, 44, 89, 0.85), rgba(74, 157, 232, 0.85));
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.member-image-wrapper:hover .member-overlay {
+opacity: 1;
+}
+
+.member-social {
+display: flex;
+gap: 15px;
+}
+
+.social-icon {
+width: 45px;
+height: 45px;
+border-radius: 50%;
+background: white;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+color: var(--primary);
+font-weight: 700;
+font-size: 11px;
+transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+background: var(--secondary);
+color: white;
+transform: scale(1.1);
+}
+
+.team-member h3 {
+font-size: 22px;
+color: var(--primary);
+margin-bottom: 8px;
+font-weight: 700;
+}
+
+.member-role {
+font-size: 14px;
+color: var(--secondary);
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 12px;
+}
+
+.member-bio {
+font-size: 15px;
+color: #666;
+line-height: 1.6;
+margin-top: 12px;
+}
+
+@media(max-width: 768px) {
+.team-grid {
+grid-template-columns: 1fr;
+gap: 30px;
+}
+
+.member-image-wrapper {
+width: 180px;
+height: 180px;
+margin: 0 auto 20px;
+}
+
+.team-member h3 {
+font-size: 20px;
+}
+}
+
+</style>
+
+
+<!-- ===================================== -->
+<!-- FOOTER -->
+<!-- ===================================== -->
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3 class="footer-logo">Safe<span>Bite</span></h3>
+            <p class="footer-tagline">Makan Lebih Aman, Tumbuh Lebih Mandiri</p>
+            <div class="footer-socials">
+                <a href="#" class="social-link" title="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" title="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" title="Twitter">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7a10.6 10.6 0 01-9-5.5z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h4>Navigasi</h4>
+            <ul class="footer-links">
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#masalah">Masalah</a></li>
+                <li><a href="#fitur">Fitur</a></li>
+                <li><a href="#sdgs">SDGs</a></li>
+                <li><a href="#tim">Tim</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Produk</h4>
+            <ul class="footer-links">
+                <li><a href="#">Fitur Utama</a></li>
+                <li><a href="#">Harga</a></li>
+                <li><a href="#">Dokumentasi</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Kontak</h4>
+            <ul class="footer-links">
+                <li><a href="mailto:info@safebite.com">info@safebite.com</a></li>
+                <li><a href="tel:+6281234567890">+62 812-3456-7890</a></li>
+                <li>Pekanbaru, Indonesia</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 SafeBite. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Kebijakan Privasi</a>
+            <span>|</span>
+            <a href="#">Syarat & Ketentuan</a>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.footer {
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8% 40px;
+}
+
+.footer-section h3 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.footer-section h3 span {
+    color: var(--secondary);
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 10px;
+}
+
+.footer-tagline {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: var(--secondary);
+    padding-left: 5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.social-link {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-link:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-bottom-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--secondary);
+}
+
+.footer-bottom-links span {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+@media(max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 8% 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        margin: 0 8%;
+    }
+
+    .footer-bottom-links {
+        justify-content: center;
+    }
+}
+</style>
+
+<!-- ===================================== -->
+<!-- JAVASCRIPT -->
+<!-- ===================================== -->
+
+<script>
+
+window.addEventListener("scroll",()=>{
+    const nav=document.getElementById("navbar");
+    if(window.scrollY>50){
+        nav.classList.add("scrolled");
+    }else{
+        nav.classList.remove("scrolled");
+    }
+});
+
+function reveal(){
+    const reveals=document.querySelectorAll(".reveal");
+    reveals.forEach(item=>{
+        let top=item.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            item.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll",reveal);
+reveal();
+
+</script>
+
+</body>
+</html>
